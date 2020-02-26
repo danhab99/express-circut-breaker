@@ -1,0 +1,16 @@
+{
+  "name": "express-circut-breaker",
+  "version": "0.0.1",
+  "description": "Provides error protection within an express route",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "error",
+    "protection"
+  ],
+  "author": "danhab99",
+  "license": "MIT"
+}
