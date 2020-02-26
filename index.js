@@ -31,6 +31,7 @@ module.exports = (opts) => {
       }
       else {
         if (handle) {
+          req.resetBreaker = () => tripped = false
           opts.handleBlockedRequest(req, res, next)
         }
       }
