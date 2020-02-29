@@ -2,7 +2,7 @@ var assert = require('assert')
 const request = require('supertest')
 var breaker = require('./index')
 
-describe('express-circut-breaker', function() {
+describe('express-circuit-breaker', function() {
   var app = require('express')()
   var forceReset = false
 
@@ -52,7 +52,7 @@ describe('express-circut-breaker', function() {
       })
   })
 
-  it('can trip the circut breaker', function() {
+  it('can trip the circuit breaker', function() {
     request(app)
       .get('/protected/crash')
       .expect(500)
@@ -61,7 +61,7 @@ describe('express-circut-breaker', function() {
       })
   })
 
-  it('will be stopped by a tripped circut breaker', function() {
+  it('will be stopped by a tripped circuit breaker', function() {
     request(app)
       .get('/protected')
       .expect(500)
@@ -70,7 +70,7 @@ describe('express-circut-breaker', function() {
       })
   })
 
-  it('will reset the circut breaker', function() {
+  it('will reset the circuit breaker', function() {
     request(app)
       .get('/reset')
       .expect(200)

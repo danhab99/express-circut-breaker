@@ -1,5 +1,5 @@
 {
-  "name": "express-circut-breaker",
+  "name": "express-circuit-breaker",
   "version": "1.0.0",
   "description": "Provides error protection within an express route",
   "main": "index.js",
