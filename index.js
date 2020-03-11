@@ -21,12 +21,7 @@ module.exports = (opts) => {
   return (req, res, next) => {
     try {
       if (!tripped || opts.handleLater) {
-        if (opts.handleLater) {
-          req.breakerTripped = true
-        }
-        else {
-          req.breakerTripped = false
-        }
+        req.breakerTripped = tripped
         next()
       }
       else {
