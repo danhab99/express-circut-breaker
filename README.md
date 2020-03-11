@@ -1,11 +1,11 @@
-# Express Circut Breaker
+# Express Circuit Breaker
 
-[![npm](https://img.shields.io/npm/dm/express-circut-breaker.svg?style=flat-square)](https://www.npmjs.org/package/express-circut-breaker)
-[![npm](https://img.shields.io/npm/v/express-circut-breaker.svg?style=flat-square)](https://www.npmjs.org/package/express-circut-breaker)
+[![npm](https://img.shields.io/npm/dm/express-circuit-breaker.svg?style=flat-square)](https://www.npmjs.org/package/express-circuit-breaker)
+[![npm](https://img.shields.io/npm/v/express-circuit-breaker.svg?style=flat-square)](https://www.npmjs.org/package/express-circuit-breaker)
 
 Provides error protection within an express route
 
-- [Express Circut Breaker](#express-circut-breaker)
+- [Express Circuit Breaker](#express-circuit-breaker)
   - [Installation](#installation)
   - [Usage](#usage)
     - [API](#api)
@@ -18,16 +18,16 @@ Provides error protection within an express route
 ## Installation
 
 ```bash
-npm i express-circut-breaker
+npm i express-circuit-breaker
 ```
 
 ```javascript
-var breaker = require('express-circut-breaker')
+var breaker = require('express-circuit-breaker')
 ```
 
 ## Usage
 
-`express-circut-breaker` produces a middleware that will block requests if an error was thrown from a previous use.
+`express-circuit-breaker` produces a middleware that will block requests if an error was thrown from a previous use.
 
 ### API
 
@@ -67,7 +67,7 @@ request(/protected) -> server <- breaker(tripped, sends back 500) -- endpoint(ne
 
 ```javascript
 var app = require('express')()
-var breaker = require('express-circut-breaker')
+var breaker = require('express-circuit-breaker')
 
 var CB = breaker({
   catchError: e => 'trip',
